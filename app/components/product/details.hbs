@@ -1,0 +1,26 @@
+<div class="card-body">
+    <h5 class="card-title">{{@data.title}}</h5>
+</div>
+<div class="card-footer">
+    <span class="badge rounded-pill bg-success">{{@data.rating}}</span>
+    <small class="text-muted"> ({{@data.totalRatings}})</small>
+    {{#if @data.stocked}}
+    <span class="badge assured rounded-pill bg-info text-dark float_right">Available</span>
+    {{else}}
+    <span class="badge assured rounded-pill bg-danger float_right">Out of Stock</span>
+    {{/if}}
+</div>
+<div class="card-footer">
+    <small class="currentPrice text-muted">₹ {{@data.currentPrice}}</small>
+    <small class="originalPrice text-muted">₹ {{@data.originalPrice}}</small>
+    {{!-- <small class="discount text-muted">{props.data.discount}%</small> --}}
+    {{#if @data.stocked}}
+    <button type="button" {{on "click" (fn this.addItem @data)}}
+        class="add-item btn btn-sm btn-outline btn-success float_right">Add to
+        Cart</button>
+    {{!-- <p class="cart-count">{{this.count}}</p> --}}
+    {{else}}
+    <button type="button" class="add-item btn btn-sm btn-outline btn-success float_right" disabled>Add to
+        Cart</button>
+    {{/if}}
+</div>

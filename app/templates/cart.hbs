@@ -1,0 +1,45 @@
+{{page-title "Cart"}}
+<main class="container mt-5">
+    <h1>Shopping Cart</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <LinkTo @route="products.list">
+                All products
+            </LinkTo>
+        </li>
+        <li class="breadcrumb-item">
+            Cart
+        </li>
+    </ol>
+
+    {{#if this.items}}
+    <div class="container">
+        {{!-- <Table @cartItems={{this.items}} /> --}}
+        <Table />
+    </div>
+
+    <section class="w-50 ml-auto text-right mb-5">
+        <div class="row">
+            <span class="col">Price</span>
+            <span class="col">{{this.subTotal}}</span>
+        </div>
+        <div class="row">
+            <span class="col">Delivery Charges</span>
+            <span class="col">{{this.deliveryCharge}}</span>
+        </div>
+        <div class="row">
+            <span class="col">Total</span>
+            <span class="col">{{this.total}}</span>
+        </div>
+    </section>
+    <button class="btn btn-success float-right">Checkout</button>
+    {{else}}
+    <div style="font-size: 200px;">
+        <LinkTo @route="products.list">
+            <i class="fa fa-cart-plus"><p style="font-size: 20px; color: red;">No items added!! Click to Add Items</p></i>
+        </LinkTo>
+    </div>
+    
+    {{/if}}
+
+</main>

@@ -1,0 +1,42 @@
+<main class="container-xxl">
+    <h1 class="primary-title">{{@title}}</h1>
+    <div class="form-check" style="padding-left:30px">
+        <Input @type="checkbox" @checked={{this.isChecked}} {{on "input" this.updateCheckedStatus}} />
+        <label class="form-check-label" for="defaultCheck1">
+            <p>View In Stock Items only</p>
+        </label>
+    </div>
+    {{#if this.authentication.authStatus}}
+    <div class="btn btn-success welcome-status">
+        Welcome, {{this.authentication.userName}}
+    </div>
+    <button type="button" {{on "click" this.logOut}} class="btn btn-danger log-out">
+        LogOut
+    </button>
+    <LinkTo @route="cart" class="cart d-inline-flex justify-content-center align-items-center">
+        <i class="fa fa-shopping-cart">
+        </i>
+        <p class="cart-count">{{this.cart.cart_count}}</p>
+    </LinkTo>
+    {{else}}
+    <button type="button" class="btn btn-primary log-button" data-toggle="modal" data-target="#exampleModalCenter">
+        Login
+    </button>
+    <div onclick="alert('Log In first to View Cart !!')"
+        class="cart d-inline-flex justify-content-center align-items-center">
+        {{!-- <button onclick="alert('You need to log IN')">
+        </button> --}}
+        <i class="fa fa-shopping-cart">
+        </i>
+        <p class="cart-count">{{this.cart.cart_count}}</p>
+    </div>
+    {{/if}}
+    <LogUser @loginStatus={{this.loginStatus}} />
+    {{yield}}
+
+    {{!-- <LinkTo @route="cart" class="cart d-inline-flex justify-content-center align-items-center">
+        <i class="fa fa-shopping-cart">
+        </i>
+        <p class="cart-count">{{this.cart.cart_count}}</p>
+    </LinkTo> --}}
+</main>

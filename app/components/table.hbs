@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <th class="text-center">#</th>
+        <th class="text-center">Particulars</th>
+        <th class="text-center">Name</th>
+        <th class="text-center" style="width: 80px;">Count</th>
+        <th class="text-center">Price</th>
+    </thead>
+    {{#each this.cart.cartItems as |item index|}}
+    <tbody>
+        <tr>
+            <td>{{increment index}}</td>
+            <td>
+                <img src={{item.imgSrc}} class="cart-table-image mx-auto d-block" alt="..." />
+            </td>
+            <td class="text-center" style="padding-top: 50px;">{{item.title}}</td>
+            <td style="padding-top: 50px;">
+                <div class="pagination">
+                    <button class="btn btn-danger" {{on "click" (fn this.removeItem item)}}> - </button>
+                    <button class="page-link" style="width: 50px;">{{item.count}}</button>
+                    <button class="btn btn-primary" {{on "click" (fn this.addItem item)}}> + </button>
+                </div>
+            </td>
+            <td class="text-center" style="padding-top: 50px;">{{item.currentPrice}}</td>
+        </tr>
+    </tbody>
+    {{/each}}
+</table>

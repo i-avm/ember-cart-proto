@@ -1,0 +1,10 @@
+{{#each @products as |product|}}
+<div class="card_container">
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <div class="card">
+            <Product::Image @data={{product}}/>
+            <Product::Details @data={{product}} />
+        </div>
+    </div>
+</div>
+{{/each}}
