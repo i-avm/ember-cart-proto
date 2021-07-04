@@ -17,7 +17,7 @@ const users = A([
 export default class AuthUserService extends Service {
   @tracked userName;
   @tracked password;
-  @tracked authStatus=true; //! Set to false after test is done
+  @tracked authStatus=false; //! Set to false in production
 
   @action
   authenticateUser() {
