@@ -17,7 +17,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd e-cart-app`
+* `cd ember-cart`
 * `npm install`
 
 ## Running / Development

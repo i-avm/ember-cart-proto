@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'e-cart-app',
+    modulePrefix: 'ember-cart',
     environment,
     rootURL: '/',
     locationType: 'auto',
