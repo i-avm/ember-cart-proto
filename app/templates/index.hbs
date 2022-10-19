@@ -1,22 +1,14 @@
-<ul class="list-group" style="width: 400px;">
-    <li class="list-group-item">
-        <h1>All apps</h1>
-    </li>
-    <li class="list-group-item list-group-item-success">
-        <LinkTo @route="products.list">
-            E Cart App
-        </LinkTo>
-    </li>
-    {{!-- <li class="list-group-item list-group-item-secondary">
-        <LinkTo @route="cards">
-            GK
-        </LinkTo>
-    </li> --}}
+<div class='jumbotron'>
+  <div class='container'>
+    <div class='main'>
+      <h1>Ember Cart</h1>
+      <LinkTo @route='products.list'>
+        <a href='#' class='btn-main'>
+          Get Started
+        </a>
+      </LinkTo>
+    </div>
+  </div>
+</div>
 
-    {{!-- <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
-    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
-    <li class="list-group-item list-group-item-info">A simple info list group item</li>
-    <li class="list-group-item list-group-item-light">A simple light list group item</li>
-    <li class="list-group-item list-group-item-dark">A simple dark list group item</li> --}}
-</ul>
 {{outlet}}
