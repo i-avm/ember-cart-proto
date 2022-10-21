@@ -7,22 +7,13 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  //* E cart App
   this.route('products', function () {
     this.route('list');
     this.route('details', { path: ':product_id/details' });
   });
   this.route('cart', { path: 'shopping-cart' });
-  //*
-
-  this.route('footballers');
-  this.route('cricketers');
   this.route('cards', { path: 'view-cards' });
 
-  //* chat
-  this.route('chat-app');
-
-  //* Others
-  this.route('calc');
+  // common
   this.route('page-not-found', { path: '/*path' });
 });
