@@ -1,0 +1,59 @@
+{{page-title "Details"}}
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src={{this.dummy.imgSrc}} class="img-fluid details-image rounded-start" alt={{this.dummy.title}}>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <LinkTo @route="products.list">
+                    <button type="button" class="btn btn-sm btn-outline btn-success float_right">Back to List</button>
+                </LinkTo>
+                <h1 class="card-title">{{this.dummy.title}}</h1>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Current Price</td>
+                            <td>₹ {{this.dummy.currentPrice}}</td>
+                        </tr>
+                        <tr>
+                            <td>Original Price</td>
+                            <td>₹ {{this.dummy.originalPrice}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container px-4 py-5" id="custom-cards">
+                    <h2>Features</h2>
+                    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                        <div class="col">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                                style="background-image: url('unsplash-photo-1.jpg');">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                                style="background-image: url('unsplash-photo-2.jpg');">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                                style="background-image: url('unsplash-photo-3.jpg');">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Lorem Ipsum</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

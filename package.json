@@ -10,6 +10,7 @@
     "doc": "doc",
     "test": "tests"
   },
+
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
